@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mTA-vn-yMO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DeepLinks-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NSEDeeplinksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phw-Z5-OYg">
+                                <rect key="frame" x="127" y="158" width="160" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Checkout View"/>
+                                <connections>
+                                    <segue destination="ORP-DT-yyP" kind="show" identifier="showCheckOut" id="ctE-eL-Qkg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrj-uM-gbd">
+                                <rect key="frame" x="132" y="219" width="150" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Product View"/>
+                                <connections>
+                                    <segue destination="7Ht-Yy-MDO" kind="show" identifier="showProductCart" id="y8W-QK-RaP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKQ-XS-SoU">
+                                <rect key="frame" x="127.5" y="280" width="159" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="With HalfModel View"/>
+                                <connections>
+                                    <segue destination="7Ht-Yy-MDO" kind="presentation" id="4OZ-Yj-Utz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xrj-uM-gbd" firstAttribute="top" secondItem="phw-Z5-OYg" secondAttribute="bottom" constant="30" id="Voh-1j-Tde"/>
+                            <constraint firstItem="Xrj-uM-gbd" firstAttribute="centerX" secondItem="phw-Z5-OYg" secondAttribute="centerX" id="We2-Fl-jTh"/>
+                            <constraint firstItem="dKQ-XS-SoU" firstAttribute="top" secondItem="Xrj-uM-gbd" secondAttribute="bottom" constant="30" id="YcF-vo-xPu"/>
+                            <constraint firstItem="dKQ-XS-SoU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dBd-hl-KGJ"/>
+                            <constraint firstItem="phw-Z5-OYg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="evA-MM-fcf"/>
+                            <constraint firstItem="phw-Z5-OYg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sli-8z-hGz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DeepLinks" id="N6W-Md-2Jo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1014" y="80"/>
+        </scene>
+        <!--DeepLink-->
+        <scene sceneID="OuT-R1-qoY">
+            <objects>
+                <navigationController title="DeepLink" automaticallyAdjustsScrollViewInsets="NO" id="mTA-vn-yMO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="emh-JC-Aff">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="14B-Xc-p4k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ra-D0-Aie" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
+        </scene>
+        <!--Checkout-->
+        <scene sceneID="yec-RQ-Xe9">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TLj-IZ-Ogd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="ORP-DT-yyP" customClass="CheckoutViewController" customModule="NSEDeeplinksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ytL-W8-ZMl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYj-3k-QlL">
+                                <rect key="frame" x="134" y="148" width="146" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go to Product Cart"/>
+                                <connections>
+                                    <action selector="productCartDeepLink:" destination="ORP-DT-yyP" eventType="touchUpInside" id="yTW-vB-jDH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iWA-xE-pIU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JYj-3k-QlL" firstAttribute="top" secondItem="iWA-xE-pIU" secondAttribute="top" constant="60" id="DZt-RP-drE"/>
+                            <constraint firstItem="JYj-3k-QlL" firstAttribute="centerX" secondItem="ytL-W8-ZMl" secondAttribute="centerX" id="qo6-Ix-avh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Checkout" id="ORM-WV-3DX"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2007" y="-251"/>
+        </scene>
+        <!--Product Cart-->
+        <scene sceneID="2Lu-jw-op0">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fWC-LW-Mu0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="7Ht-Yy-MDO" customClass="ProductCartViewController" customModule="NSEDeeplinksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tlS-0W-1Hx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KC-UI-bEr">
+                                <rect key="frame" x="144.5" y="148" width="125" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go to Checkout"/>
+                                <connections>
+                                    <action selector="checkoutDeepLink:" destination="7Ht-Yy-MDO" eventType="touchUpInside" id="Yj9-so-4WR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Aae-jG-97h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8KC-UI-bEr" firstAttribute="top" secondItem="Aae-jG-97h" secondAttribute="top" constant="60" id="bQH-sA-oVu"/>
+                            <constraint firstItem="8KC-UI-bEr" firstAttribute="centerX" secondItem="tlS-0W-1Hx" secondAttribute="centerX" id="tvb-BY-jj6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Product Cart" id="evq-vs-RxW"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2006" y="413"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="y8W-QK-RaP"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
